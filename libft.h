@@ -6,7 +6,7 @@
 /*   By: cbegne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 18:25:30 by cbegne            #+#    #+#             */
-/*   Updated: 2016/12/05 12:38:38 by cbegne           ###   ########.fr       */
+/*   Updated: 2016/12/07 18:00:34 by cbegne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,7 @@ char				*ft_strnjoin(char const *s1, char const *s2, size_t n);
 char				*ft_strtrim(char const *s);
 char				**ft_strsplit(char const *s, char c);
 char				*ft_itoa(int n);
+char				*ft_itoa_base(int value, int base);
 void				ft_putchar(char c);
 void				ft_putstr(char *str);
 void				ft_putendl(char const *s);
@@ -87,8 +88,10 @@ t_list				*ft_lstnew(void const *content, size_t content_size);
 void				ft_lstdelone(t_list **alst, void (*del)(void*, size_t));
 void				ft_lstdel(t_list **alst, void (*del)(void*, size_t));
 void				ft_lstadd(t_list **alst, t_list *new);
+void				ft_lstaddback(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 int					ft_sqrt(int nb);
+int					ft_abs(int n);
 
 #endif

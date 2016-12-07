@@ -6,7 +6,7 @@
 #    By: cbegne <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/05 14:18:02 by cbegne            #+#    #+#              #
-#    Updated: 2016/12/05 12:39:20 by cbegne           ###   ########.fr        #
+#    Updated: 2016/12/07 18:00:51 by cbegne           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,6 +66,7 @@ SRCS = ft_memset.c\
 	   ft_strtrim.c\
 	   ft_strsplit.c\
 	   ft_itoa.c\
+	   ft_itoa_base.c\
 	   ft_putchar.c\
 	   ft_putstr.c\
 	   ft_putendl.c\
@@ -79,9 +80,11 @@ SRCS = ft_memset.c\
 	   ft_lstdelone.c\
 	   ft_lstdel.c\
 	   ft_lstadd.c\
+	   ft_lstaddback.c\
 	   ft_lstiter.c\
 	   ft_lstmap.c\
-	   ft_sqrt.c
+	   ft_sqrt.c\
+	   ft_abs.c
 
 OBJ = $(SRCS:.c=.o)
 
@@ -90,7 +93,7 @@ HEADER = libft.h
 all: $(NAME)
 
 $(NAME):
-		$(CC) $(CFLAGS) $(SRCS) $(HEADER)
+		$(CC) $(CFLAGS) -c $(SRCS)
 		ar rc $(NAME) $(OBJ)
 		ranlib $(NAME)
 
@@ -101,3 +104,5 @@ fclean: clean
 		/bin/rm -f $(NAME)
 
 re: fclean all
+
+.PHONY: all clean fclean re

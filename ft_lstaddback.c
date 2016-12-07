@@ -1,26 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_lstaddback.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cbegne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/11 16:53:59 by cbegne            #+#    #+#             */
-/*   Updated: 2016/12/07 18:06:51 by cbegne           ###   ########.fr       */
+/*   Created: 2016/12/07 12:37:57 by cbegne            #+#    #+#             */
+/*   Updated: 2016/12/07 12:50:16 by cbegne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void			ft_putnbr(int n)
+void	ft_lstaddback(t_list **alst, t_list *new)
 {
-	if (n < 0)
-		ft_putchar('-');
-	if (n >= 10 || n <= -10)
-	{
-		ft_putnbr(ft_abs(n / 10));
-		ft_putchar(ft_abs(n % 10) + '0');
-	}
-	else if (n <= 9 || n >= -9)
-		ft_putchar(ft_abs(n) + '0');
+	t_list	*tmp;
+
+	tmp = *alst;
+	while (tmp->next != NULL)
+		tmp = tmp->next;
+	tmp->next = new;
 }
