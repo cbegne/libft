@@ -6,7 +6,7 @@
 /*   By: cbegne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/10 11:53:40 by cbegne            #+#    #+#             */
-/*   Updated: 2016/11/15 11:42:19 by cbegne           ###   ########.fr       */
+/*   Updated: 2016/12/07 18:19:51 by cbegne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ void	ft_striter(char *s, void (*f)(char*))
 	int i;
 
 	i = 0;
-	if (s == NULL || f == NULL)
-		return ;
 	while (s[i])
 	{
 		f(s + i);

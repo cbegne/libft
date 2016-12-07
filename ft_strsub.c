@@ -6,7 +6,7 @@
 /*   By: cbegne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/10 19:17:51 by cbegne            #+#    #+#             */
-/*   Updated: 2016/11/10 20:02:25 by cbegne           ###   ########.fr       */
+/*   Updated: 2016/12/07 18:27:23 by cbegne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,7 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
 	char	*str;
 
-	if (s == NULL)
-		return (NULL);
-	str = ft_strnew(len);
-	if (str == NULL)
+	if (!(str = ft_strnew(len)))
 		return (NULL);
 	str = ft_strncpy(str, s + start, len);
 	return (str);

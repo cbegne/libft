@@ -6,7 +6,7 @@
 /*   By: cbegne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/03 13:01:08 by cbegne            #+#    #+#             */
-/*   Updated: 2016/11/11 13:16:28 by cbegne           ###   ########.fr       */
+/*   Updated: 2016/12/07 18:17:58 by cbegne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,5 @@
 
 void	ft_putstr(char *str)
 {
-	if (str == NULL)
-		return ;
 	write(1, str, ft_strlen(str));
 }

@@ -6,7 +6,7 @@
 /*   By: cbegne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/10 13:02:42 by cbegne            #+#    #+#             */
-/*   Updated: 2016/11/10 13:10:34 by cbegne           ###   ########.fr       */
+/*   Updated: 2016/12/07 18:21:19 by cbegne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,9 @@ char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 	size_t	len;
 	size_t	i;
 
-	if (s == NULL)
-		return (NULL);
 	i = 0;
 	len = ft_strlen(s);
-	str = ft_strnew(len);
-	if (str == NULL)
+	if (!(str = ft_strnew(len)))
 		return (NULL);
 	while (i < len)
 	{

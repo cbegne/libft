@@ -6,7 +6,7 @@
 /*   By: cbegne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/09 18:50:36 by cbegne            #+#    #+#             */
-/*   Updated: 2016/11/18 13:57:23 by cbegne           ###   ########.fr       */
+/*   Updated: 2016/12/07 18:28:49 by cbegne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,7 @@ void	*ft_memalloc(size_t size)
 	size_t	i;
 
 	i = 0;
-	str = malloc(size);
-	if (str == NULL)
+	if (!(str = malloc(size)))
 		return (NULL);
 	while (i < size)
 	{

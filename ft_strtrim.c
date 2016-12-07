@@ -6,7 +6,7 @@
 /*   By: cbegne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/10 20:24:25 by cbegne            #+#    #+#             */
-/*   Updated: 2016/11/15 12:22:40 by cbegne           ###   ########.fr       */
+/*   Updated: 2016/12/07 18:27:49 by cbegne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,6 @@ char	*ft_strtrim(char const *s)
 	size_t	len;
 
 	i = 0;
-	if (s == NULL)
-		return (NULL);
 	while ((s[i] == ' ' || s[i] == '\n' || s[i] == '\t') && s[i])
 		i++;
 	l = ft_strlen(s) - 1;

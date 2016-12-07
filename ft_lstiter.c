@@ -6,7 +6,7 @@
 /*   By: cbegne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/14 16:52:20 by cbegne            #+#    #+#             */
-/*   Updated: 2016/11/14 17:21:29 by cbegne           ###   ########.fr       */
+/*   Updated: 2016/12/07 18:16:36 by cbegne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 {
-	if (f == NULL)
-		return ;
 	while (lst != NULL)
 	{
 		f(lst);
