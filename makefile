@@ -6,7 +6,7 @@
 #    By: cbegne <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/05 14:18:02 by cbegne            #+#    #+#              #
-#    Updated: 2016/12/07 18:00:51 by cbegne           ###   ########.fr        #
+#    Updated: 2016/12/13 15:20:23 by cbegne           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -84,7 +84,9 @@ SRCS = ft_memset.c\
 	   ft_lstiter.c\
 	   ft_lstmap.c\
 	   ft_sqrt.c\
-	   ft_abs.c
+	   ft_abs.c\
+	   ft_putwchar.c\
+	   ft_putwstr.c
 
 OBJ = $(SRCS:.c=.o)
 
