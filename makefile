@@ -6,7 +6,7 @@
 #    By: cbegne <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/05 14:18:02 by cbegne            #+#    #+#              #
-#    Updated: 2016/12/13 15:20:23 by cbegne           ###   ########.fr        #
+#    Updated: 2016/12/19 18:49:34 by cbegne           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,6 +52,7 @@ SRCS = ft_memset.c\
 	   ft_memalloc.c\
 	   ft_memdel.c\
 	   ft_strnew.c\
+	   ft_strcnew.c\
 	   ft_strdel.c\
 	   ft_strclr.c\
 	   ft_striter.c\
