@@ -6,7 +6,7 @@
 /*   By: cbegne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 18:25:30 by cbegne            #+#    #+#             */
-/*   Updated: 2017/01/09 18:04:13 by cbegne           ###   ########.fr       */
+/*   Updated: 2017/01/09 19:40:35 by cbegne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,5 +98,7 @@ int					ft_sqrt(int nb);
 int					ft_abs(int n);
 void				ft_putwchar(wchar_t c);
 void				ft_putwstr(wchar_t *str);
+int					ft_max(int nb1, int nb2);
+void				ft_strupper(char *s);
 
 #endif
