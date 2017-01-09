@@ -6,7 +6,7 @@
 #    By: cbegne <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/05 14:18:02 by cbegne            #+#    #+#              #
-#    Updated: 2016/12/19 18:49:34 by cbegne           ###   ########.fr        #
+#    Updated: 2017/01/09 13:29:23 by cbegne           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -87,7 +87,9 @@ SRCS = ft_memset.c\
 	   ft_sqrt.c\
 	   ft_abs.c\
 	   ft_putwchar.c\
-	   ft_putwstr.c
+	   ft_putwstr.c\
+	   ft_max.c\
+	   ft_strupper.c
 
 OBJ = $(SRCS:.c=.o)
 
