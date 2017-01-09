@@ -6,7 +6,7 @@
 #    By: cbegne <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/05 14:18:02 by cbegne            #+#    #+#              #
-#    Updated: 2017/01/09 13:29:23 by cbegne           ###   ########.fr        #
+#    Updated: 2017/01/09 18:34:04 by cbegne           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -64,6 +64,7 @@ SRCS = ft_memset.c\
 	   ft_strsub.c\
 	   ft_strjoin.c\
 	   ft_strnjoin.c\
+	   ft_strnnjoin.c\
 	   ft_strtrim.c\
 	   ft_strsplit.c\
 	   ft_itoa.c\
