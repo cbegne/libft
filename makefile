@@ -6,7 +6,7 @@
 #    By: cbegne <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/05 14:18:02 by cbegne            #+#    #+#              #
-#    Updated: 2017/01/26 12:26:17 by cbegne           ###   ########.fr        #
+#    Updated: 2017/01/26 12:35:37 by cbegne           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -122,19 +122,19 @@ INC = ./includes/
 all: $(NAME)
 
 $(NAME): $(OBJ)
-		ar rc $(NAME) $(OBJ)
+		@ar rc $(NAME) $(OBJ)
 		ranlib $(NAME)
 
 $(OBJ_PATH)%.o: $(SRCS_PATH)%.c
 		@mkdir -p obj
-		gcc -c $(FLAGS) $< -I $(INC) -o $@
+		@gcc -c $(FLAGS) $< -I $(INC) -o $@
 
 $(OBJ_PATH)%.o: $(PRINTF_PATH)%.c
 		@mkdir -p obj
-		gcc -c $(FLAGS) $< -I $(INC) -o $@
+		@gcc -c $(FLAGS) $< -I $(INC) -o $@
 
 clean:
-		/bin/rm -f $(OBJ)
+		@/bin/rm -f $(OBJ)
 
 fclean: clean
 		/bin/rm -f $(NAME)
