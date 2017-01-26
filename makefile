@@ -6,17 +6,13 @@
 #    By: cbegne <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/05 14:18:02 by cbegne            #+#    #+#              #
-#    Updated: 2017/01/21 12:25:24 by cbegne           ###   ########.fr        #
+#    Updated: 2017/01/26 12:26:17 by cbegne           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-
-CC = gcc
-
-CFLAGS = -c -Wall -Wextra -Werror
-
-SRCS = ft_memset.c\
+FLAGS = -Wall -Wextra -Werror
+SRCS_NAME = ft_memset.c\
 	   ft_bzero.c\
 	   ft_memcpy.c\
 	   ft_memccpy.c\
@@ -91,18 +87,51 @@ SRCS = ft_memset.c\
 	   ft_putwstr.c\
 	   ft_max.c\
 	   ft_strupper.c\
-	   ft_sort_params.c
+	   ft_sort_params.c\
+	   get_next_line.c\
 
-OBJ = $(SRCS:.c=.o)
+SRCS_PATH = ./srcs/
+SRCS = $(addprefix $(SRCS_PATH), $(SRCS_NAME))
 
-HEADER = libft.h
+PRINTF_NAME = ft_printf.c\
+		parse.c\
+		get_flag_length.c\
+		get_width_precision.c\
+		get_index.c\
+		convert_and_apply.c\
+		create_unsigned.c\
+		create_signed.c\
+		create_char_string.c\
+		create_wchar_string.c\
+		check_params.c\
+		apply_param_unsigned.c\
+		apply_param_signed.c\
+		apply_param_string.c
+
+PRINTF_PATH = ./ft_printf/
+PRINTF = $(addprefix $(PRINTF_PATH), $(PRINTF_NAME))
+
+OBJ_NAME = $(SRCS_NAME:.c=.o)\
+		$(PRINTF_NAME:.c=.o)
+OBJ_PATH = ./obj/
+
+OBJ = $(addprefix $(OBJ_PATH), $(OBJ_NAME))
+
+INC = ./includes/
 
 all: $(NAME)
 
-$(NAME):
-		$(CC) $(CFLAGS) -c $(SRCS)
+$(NAME): $(OBJ)
 		ar rc $(NAME) $(OBJ)
 		ranlib $(NAME)
+
+$(OBJ_PATH)%.o: $(SRCS_PATH)%.c
+		@mkdir -p obj
+		gcc -c $(FLAGS) $< -I $(INC) -o $@
+
+$(OBJ_PATH)%.o: $(PRINTF_PATH)%.c
+		@mkdir -p obj
+		gcc -c $(FLAGS) $< -I $(INC) -o $@
 
 clean:
 		/bin/rm -f $(OBJ)
