@@ -6,7 +6,7 @@
 #    By: cbegne <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/05 14:18:02 by cbegne            #+#    #+#              #
-#    Updated: 2017/02/17 14:49:08 by cbegne           ###   ########.fr        #
+#    Updated: 2017/02/19 11:46:27 by cbegne           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -89,7 +89,10 @@ SRCS_NAME = ft_memset.c\
 	   ft_strupper.c\
 	   ft_sort_params.c\
 	   get_next_line.c\
-	   ft_strcjoin.c
+	   ft_strcjoin.c\
+	   ft_strtabdup.c\
+	   ft_strtabdel.c\
+	   ft_tablen.c
 
 SRCS_PATH = ./srcs/
 SRCS = $(addprefix $(SRCS_PATH), $(SRCS_NAME))
