@@ -6,9 +6,11 @@
 /*   By: cbegne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/08 13:42:24 by cbegne            #+#    #+#             */
-/*   Updated: 2016/11/08 15:42:06 by cbegne           ###   ########.fr       */
+/*   Updated: 2017/02/20 11:45:52 by cbegne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strstr(const char *big, const char *little)
 {
