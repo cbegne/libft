@@ -6,7 +6,7 @@
 /*   By: cbegne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/17 14:46:59 by cbegne            #+#    #+#             */
-/*   Updated: 2017/02/17 15:00:47 by cbegne           ###   ########.fr       */
+/*   Updated: 2017/02/19 17:41:56 by cbegne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ char	*ft_strcjoin(char const *s1, char const *s2, char c)
 	if (str != NULL)
 	{
 		ft_strcpy(str, s1);
-		*(str + len1) = c;
-		ft_strcat(str, s2);
+		str[len1] = c;
+		ft_strcpy(str + len1 + 1, s2);
 	}
 	return (str);
 }
