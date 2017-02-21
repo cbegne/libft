@@ -6,7 +6,7 @@
 /*   By: cbegne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/13 15:31:45 by cbegne            #+#    #+#             */
-/*   Updated: 2017/01/26 11:40:49 by cbegne           ###   ########.fr       */
+/*   Updated: 2017/02/21 10:23:37 by cbegne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ typedef struct	s_print
 }				t_print;
 
 int				ft_printf(const char *format, ...);
+int				ft_printf_fd(int fd, const char *format, ...);
 void			parse(const char **format, va_list ap, t_print *param);
 int				is_flag(char c);
 int				is_length(char c);
