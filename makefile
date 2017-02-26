@@ -6,7 +6,7 @@
 #    By: cbegne <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/11/05 14:18:02 by cbegne            #+#    #+#              #
-#    Updated: 2017/02/19 11:46:27 by cbegne           ###   ########.fr        #
+#    Updated: 2017/02/21 10:52:03 by cbegne           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -110,7 +110,8 @@ PRINTF_NAME = ft_printf.c\
 		check_params.c\
 		apply_param_unsigned.c\
 		apply_param_signed.c\
-		apply_param_string.c
+		apply_param_string.c\
+		ft_printf_fd.c
 
 PRINTF_PATH = ./ft_printf/
 PRINTF = $(addprefix $(PRINTF_PATH), $(PRINTF_NAME))
