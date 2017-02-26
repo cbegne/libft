@@ -6,11 +6,11 @@
 /*   By: cbegne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/30 10:36:45 by cbegne            #+#    #+#             */
-/*   Updated: 2017/02/20 18:04:55 by cbegne           ###   ########.fr       */
+/*   Updated: 2017/02/26 14:56:22 by cbegne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft/libft.h"
 #include "get_next_line.h"
 
 t_get	*find_fd(int fd, t_get **lst)
@@ -58,6 +58,7 @@ int		check_stock(t_get *std, char **line)
 		free(tmp);
 		return (1);
 	}
+	free(std->stock);
 	std->stock = NULL;
 	return (0);
 }
