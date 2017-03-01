@@ -1,28 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtabdup.c                                     :+:      :+:    :+:   */
+/*   ft_tabjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cbegne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/16 12:31:09 by cbegne            #+#    #+#             */
-/*   Updated: 2017/02/17 15:51:32 by cbegne           ###   ########.fr       */
+/*   Created: 2017/02/28 14:34:38 by cbegne            #+#    #+#             */
+/*   Updated: 2017/02/28 14:55:33 by cbegne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	**ft_strtabdup(char **env, int size)
+char	**ft_tabjoin(char **t1, char **t2)
 {
-	int		i;
 	char	**tab;
+	int		len1;
+	int		len2;
+	int		i;
 
-	tab = (char**)ft_memalloc(sizeof(char*) * (size + 1));
 	i = 0;
-	while (i < size)
+	len1 = ft_tablen(t1);
+	len2 = ft_tablen(t2);
+	tab = (char**)ft_memalloc(sizeof(char*) * (len1 + len2 + 1));
+	if (tab)
 	{
-		tab[i] = ft_strdup(env[i]);
-		i++;
+		i = 0;
+		while (*t1)
+		{
+			tab[i++] = ft_strdup(*t1);
+			t1++;
+		}
+		while (*t2)
+		{
+			tab[i++] = ft_strdup(*t2);
+			t2++;
+		}
 	}
 	return (tab);
 }

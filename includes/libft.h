@@ -6,7 +6,7 @@
 /*   By: cbegne <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/04 18:25:30 by cbegne            #+#    #+#             */
-/*   Updated: 2017/02/26 16:21:03 by cbegne           ###   ########.fr       */
+/*   Updated: 2017/02/28 15:19:29 by cbegne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,10 +103,13 @@ int					ft_max(int nb1, int nb2);
 void				ft_strupper(char *s);
 void				ft_sort_params(int ac, char **av);
 char				*ft_strcjoin(char const *s1, char const *s2, char c);
-char				**ft_strtabdup(char **tab, int size);
-void				ft_strtabdel(char **tab);
+char				**ft_tabdup(char **tab);
+void				ft_tabdel(char **tab);
 int					ft_tablen(char **tab);
 void				ft_print_tab(char **tab);
 int					ft_strisalnum(char *str);
+int					ft_strnbchar(char *str, char c);
+char				**ft_tabjoin(char **t1, char **t2);
+char				**ft_tabappend(char **tab, char *str);
 
 #endif
